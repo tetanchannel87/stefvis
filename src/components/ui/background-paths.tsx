@@ -33,14 +33,13 @@ export function FloatingPaths({ position }: { position: number }) {
                         stroke="currentColor"
                         strokeWidth={path.width}
                         strokeOpacity={0.1 + path.id * 0.03}
-                        initial={{ pathLength: 0.3, opacity: 0.4, pathOffset: 0 }}
+                        initial={{ pathLength: 0.4, opacity: 0.4, pathOffset: 0 }}
                         animate={{
-                            pathLength: 1,
                             opacity: [0.25, 0.55, 0.25],
                             pathOffset: [0, 1],
                         }}
                         transition={{
-                            duration: 40 + Math.random() * 15,
+                            duration: 18 + Math.random() * 8,
                             repeat: Number.POSITIVE_INFINITY,
                             ease: "linear",
                         }}
