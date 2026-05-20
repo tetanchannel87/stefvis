@@ -51,8 +51,8 @@ export function AboutTablet() {
       <div className="h-full w-full p-4 md:p-10 text-neutral-200 overflow-hidden">
         <div className="grid md:grid-cols-2 gap-8 h-full">
           <div className="space-y-4">
-            <p className="text-xs uppercase tracking-[0.25em] text-neutral-500">
-              История
+            <p className="text-xs tracking-[0.25em] text-neutral-500 font-mono">
+              // readme.md
             </p>
             <h3 className="text-2xl md:text-3xl font-semibold text-white">
               Привет, я Стефан
