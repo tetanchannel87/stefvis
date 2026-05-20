@@ -12,6 +12,14 @@ const useSpotlightEffect = (config: SpotlightConfig) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    // не активируем на тач-устройствах — не нужен белый блик при тапе
+    if (
+      typeof window === "undefined" ||
+      !window.matchMedia("(pointer: fine)").matches
+    ) {
+      return;
+    }
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 

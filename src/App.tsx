@@ -20,7 +20,7 @@ export default function App() {
       <SpotlightCursor config={{ radius: 260, brightness: 0.18, color: "#ffffff" }} />
       <Marquee />
       <div id="top" className="relative z-10 w-full flex flex-col items-center gap-8 pt-20 md:pt-24">
-      <Card className="w-full max-w-6xl min-h-[820px] md:min-h-[600px] md:h-[600px] bg-black/[0.96] relative overflow-hidden border-neutral-800">
+      <Card className="w-full max-w-6xl min-h-[860px] md:min-h-[600px] md:h-[600px] bg-black/[0.96] relative overflow-hidden border-neutral-800">
         <Spotlight
           className="-top-40 left-0 md:left-60 md:-top-20"
           fill="white"
@@ -59,11 +59,14 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex-1 relative min-h-[420px] md:min-h-[300px]">
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
-            />
+          <div className="flex-1 relative min-h-[460px] md:min-h-[300px] overflow-hidden">
+            {/* На мобиле растягиваем канвас в ширину чтобы Spline отрендерил робота в landscape пропорции; центр-кроп показывает только центральную часть */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[200%] md:w-full md:left-0 md:translate-x-0">
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </Card>
